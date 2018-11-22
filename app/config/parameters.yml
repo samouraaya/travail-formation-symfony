@@ -1,0 +1,13 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: formation-9
+    database_user: root
+    database_password: null
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: 38d678ee27cc883868be024e42ed0d71b56e69e8
+    files_directory: '%kernel.project_dir%/web/uploads'

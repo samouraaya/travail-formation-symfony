@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Product creation</h1>
+    
+
+    {{ form_start(form, {attr: {novalidate: 'novalidate'} }) }}
+    
+    <small style="color: red">{{ form_errors(form) }}</small><br>
+    
+        {{ form_label(form.name) }}
+        {{ form_widget(form.name) }}
+        {{ form_errors(form.name) }}
+        
+        <br>
+        
+        {{ form_label(form.price) }}
+        {{ form_widget(form.price) }}
+        {{ form_errors(form.price) }}
+        
+        <br>
+        
+        {{ form_label(form.qte) }}
+        {{ form_widget(form.qte, {'attr': {'class': 'test'} }) }}
+        {{ form_errors(form.qte) }}
+        
+        <br>
+        
+        {{ form_label(form.test) }}
+        {{ form_widget(form.test) }}
+        {{ form_errors(form.test) }}
+        
+         <br>
+        
+        {{ form_label(form.categorie) }}
+        {{ form_widget(form.categorie) }}
+        {{ form_errors(form.categorie) }}
+        
+        <br>
+        
+        {{ form_label(form.file) }}
+        {{ form_widget(form.file) }}
+        {{ form_errors(form.file) }}
+        
+        {{ form_widget(form._token) }}
+        
+        <br>
+        <input type="submit" value="Create" />
+{#    {{ form_end(form) }}#}
+</form>
+
+    <ul>
+        <li>
+            <a href="{{ path('product_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

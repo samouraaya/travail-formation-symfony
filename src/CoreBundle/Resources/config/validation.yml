@@ -1,0 +1,17 @@
+CoreBundle\Entity\Product:
+    properties:
+        name:
+            - NotBlank:
+                message: Champs obligatoire
+            - Length:
+                min: 3
+                max: 10
+                minMessage: 'Your name must be at least {{ limit }} characters long'
+                maxMessage: 'Your name cannot be longer than {{ limit }} characters'
+
+        price:
+            - NotBlank:
+                message: Champs obligatoire
+        qte:
+            - NotBlank:
+                message: Champs obligatoire

@@ -1,0 +1,33 @@
+product_index:
+    path:     /list/{category}
+    defaults: { _controller: "AppBundle:Product:index", category: all }
+    methods:  GET
+    
+product_index_json:
+    path:     /json/{category}
+    defaults: { _controller: "AppBundle:Product:indexJson", category: all }
+
+product_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:Product:show" }
+    methods:  GET
+
+product_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Product:new" }
+    methods:  [GET, POST]
+
+product_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:Product:edit" }
+    methods:  [GET, POST]
+
+product_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:Product:delete" }
+    methods:  DELETE
+    
+product_remove:
+    path:     /{id}/remove
+    defaults: { _controller: "AppBundle:Product:remove" }
+    methods:  [DELETE, POST]

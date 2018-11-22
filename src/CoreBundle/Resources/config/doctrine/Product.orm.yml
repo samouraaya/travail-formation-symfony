@@ -1,0 +1,49 @@
+CoreBundle\Entity\Product:
+    type: entity
+    table: products
+    repositoryClass: CoreBundle\Repository\ProductRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        price:
+            type: float
+        qte:
+            type: integer
+            nullable: true
+        file:
+            type: string
+            nullable: true
+        fullPath: 
+            type: string
+            nullable: true
+        slug:
+            type: string
+            length: 128
+            gedmo:
+                slug:
+                    separator: _
+                    style: camel
+                    fields:
+                        - name
+        created:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
+        updated:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: update
+    manyToOne:
+        categorie:
+            targetEntity: Category
+            inversedBy: produit
+    lifecycleCallbacks: {  }

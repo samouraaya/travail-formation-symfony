@@ -1,0 +1,286 @@
+<?php
+
+namespace CoreBundle\Entity;
+
+/**
+ * Product
+ */
+class Product
+{
+    /**
+     * @var integer
+     */
+    private $id;
+
+    /**
+     * @var string
+     */
+    private $name;
+
+    /**
+     * @var float
+     */
+    private $price;
+
+    /**
+     * @var integer
+     */
+    private $qte;
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return Product
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set price
+     *
+     * @param float $price
+     *
+     * @return Product
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    /**
+     * Get price
+     *
+     * @return float
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * Set qte
+     *
+     * @param integer $qte
+     *
+     * @return Product
+     */
+    public function setQte($qte)
+    {
+        $this->qte = $qte;
+
+        return $this;
+    }
+
+    /**
+     * Get qte
+     *
+     * @return integer
+     */
+    public function getQte()
+    {
+        return $this->qte;
+    }
+    /**
+     * @var \CoreBundle\Entity\Category
+     */
+    private $categorie;
+
+
+    /**
+     * Set categorie
+     *
+     * @param \CoreBundle\Entity\Category $categorie
+     *
+     * @return Product
+     */
+    public function setCategorie(\CoreBundle\Entity\Category $categorie = null)
+    {
+        $this->categorie = $categorie;
+
+        return $this;
+    }
+
+    /**
+     * Get categorie
+     *
+     * @return \CoreBundle\Entity\Category
+     */
+    public function getCategorie()
+    {
+        return $this->categorie;
+    }
+    /**
+     * @var \DateTime
+     */
+    private $created;
+
+    /**
+     * @var \DateTime
+     */
+    private $updated;
+
+
+    /**
+     * Set created
+     *
+     * @param \DateTime $created
+     *
+     * @return Product
+     */
+    public function setCreated($created)
+    {
+        $this->created = $created;
+
+        return $this;
+    }
+
+    /**
+     * Get created
+     *
+     * @return \DateTime
+     */
+    public function getCreated()
+    {
+        return $this->created;
+    }
+
+    /**
+     * Set updated
+     *
+     * @param \DateTime $updated
+     *
+     * @return Product
+     */
+    public function setUpdated($updated)
+    {
+        $this->updated = $updated;
+
+        return $this;
+    }
+
+    /**
+     * Get updated
+     *
+     * @return \DateTime
+     */
+    public function getUpdated()
+    {
+        return $this->updated;
+    }
+    /**
+     * @var string
+     */
+    private $slug;
+
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     *
+     * @return Product
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+    /**
+     * @var string
+     */
+    private $file;
+
+
+    /**
+     * Set file
+     *
+     * @param string $file
+     *
+     * @return Product
+     */
+    public function setFile($file)
+    {
+        $this->file = $file;
+
+        return $this;
+    }
+
+    /**
+     * Get file
+     *
+     * @return string
+     */
+    public function getFile()
+    {
+        return $this->file;
+    }
+    /**
+     * @var string
+     */
+    private $fullPath;
+
+
+    /**
+     * Set fullPath
+     *
+     * @param string $fullPath
+     *
+     * @return Product
+     */
+    public function setFullPath($fullPath)
+    {
+        $this->fullPath = $fullPath;
+
+        return $this;
+    }
+
+    /**
+     * Get fullPath
+     *
+     * @return string
+     */
+    public function getFullPath()
+    {
+        return $this->fullPath;
+    }
+}
